@@ -18,7 +18,9 @@ class ExpenseList extends React.Component {
 
   list(){
     let newState = [...this.props.expenses];
-    let category = this.props.category;
+    console.log('newstaet', newState)
+    let category = this.props.id;
+    console.log('props id', this.props.id)
      let newExpenses = newState.filter(function (el) {
         return el.category === category
       });
@@ -27,7 +29,7 @@ class ExpenseList extends React.Component {
       return newExpenses.map((expense, index) => {
 
         return <ExpenseItem item={expense.item} expense={expense.expense} timestamp={expense.timestamp}
-        key={index} index={index} id={expense.id}
+        key={expense.id} index={index} id={expense.id}
         catUpdate={this.props.catUpdate}
         catDestroy={this.props.catDestroy}
       />

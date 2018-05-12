@@ -44,7 +44,7 @@ class CategoryItem extends React.Component {
   render(){
     console.log('render', this.props)
     if(this.state.isEditing) {
-      return <UpdateCategory catUpdate={this.props.catUpdate}
+      return <UpdateCategory exUpdate={this.props.exUpdate}
         id={this.props.id}
         index={this.props.index}
         toggleEdit={this.toggleEdit}
@@ -58,8 +58,8 @@ class CategoryItem extends React.Component {
        <button onClick={this.remove}>Remove</button>
       <button onClick={this.toggleEdit}>Edit</button>
       </div>
-      <ExpenseForm exCreate={this.props.exCreate} category={this.props.name} update={this.update}/>
-      <ExpenseList category={this.props.name} expenses={this.state.expenses} />
+      <ExpenseForm exCreate={this.props.exCreate} category={this.props.id} update={this.update}/>
+      <ExpenseList id={this.props.id} expenses={this.state.expenses} />
       </div>
   }
 }

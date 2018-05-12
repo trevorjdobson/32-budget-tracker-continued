@@ -7,7 +7,7 @@ export function exCreate(data) {
 	return {type: EXPENSE_CREATE, data}
 }
 
-export function extUpdate(data) {
+export function exUpdate(data) {
 	return {type: EXPENSE_UPDATE, data}
 }
 

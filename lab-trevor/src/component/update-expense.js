@@ -13,7 +13,7 @@ class UpdateExpense extends React.Component {
     let data = {
       item: ev.target.title.value,
       expense: ev.target.budget.value,
-      index: this.props.index
+      id: this.props.id
     }
     console.log('index', data.index)
     this.props.exUpdate(data);

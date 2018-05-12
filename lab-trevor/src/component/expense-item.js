@@ -32,7 +32,6 @@ class ExpenseItem extends React.Component {
   }
 
   render(){
-    console.log('props', this.props)
      if(this.state.isEditing) {
       return <UpdateExpense exUpdate={this.props.exUpdate}
         id={this.props.id}
@@ -50,9 +49,6 @@ class ExpenseItem extends React.Component {
     }
 }
 
-// const mapStateToProps = state => {
-//   return {expenses: state.expenseReducer.expenses};
-// }
 
 const mapDispatchToProps = (dispatch, getState) => {
   return {
