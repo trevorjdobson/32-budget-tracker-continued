@@ -44,7 +44,7 @@ class CategoryItem extends React.Component {
   render(){
     console.log('render', this.props)
     if(this.state.isEditing) {
-      return <UpdateCategory exUpdate={this.props.exUpdate}
+      return <UpdateCategory catUpdate={this.props.catUpdate}
         id={this.props.id}
         index={this.props.index}
         toggleEdit={this.toggleEdit}
